@@ -1,0 +1,65 @@
+<div class="navbar">
+  <button id="homeBtn">Return Home</button>
+  <button id="logoutBtn" class="right">Log Out</button>
+</div>
+
+<div class="content">
+  <div class="left">
+    <form>
+      <label for="characterName">Character Name:</label>
+      <input type="text" id="characterName" name="characterName">
+      <img src="placeholder.jpg" alt="Placeholder Image">
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age">
+      <label for="location">Location/School:</label>
+      <input type="text" id="location" name="location">
+      <label for="alignment">Alignment:</label>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Lawful Good</a></li>
+              <li><a href="#">Neutral Good</a></li>
+              <li><a href="#">Chaotic Good</a></li>
+              <li><a href="#">Lawful Neutral</a></li>
+              <li><a href="#">True Neutral</a></li>
+              <li><a href="#">Chaotic Neutral</a></li>
+              <li><a href="#">Lawful Evil</a></li>
+              <li><a href="#">Neutral Evil</a></li>
+              <li><a href="#">Chaotic Evil</a></li>
+            </ul>
+          </li>
+        </ul>
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio"></textarea>
+    </form>
+  </div>
+{{!-- Will fix later --}}
+  <div class="right">
+    <div class="stats">
+      Stats:
+      {{#each stats}}
+      <label for="{{name}}">{{name}}:</label>
+      <select id="{{name}}">
+        {{#each options}}
+        <option value=></option>
+        {{/each}}
+      </select>
+      <input type="text" placeholder="Level">
+      {{/each}}
+    </div>
+  
+    <div class="abilities">
+      Abilities:
+      {{#each abilities}}
+      <input type="text" placeholder="{{this}}">
+      {{/each}}
+    </div>
+  
+    <div class="skills">
+      Skills:
+      {{#each skills}}
+      <input type="text" placeholder="{{this}}">
+      {{/each}}
+    </div>
+  </div>
+  </div>
