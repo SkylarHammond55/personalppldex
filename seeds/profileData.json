@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Test",
+        "image": "imagetest",
+        "bio": "This is a test",
+        "user_id": 1,
+        "ability_id": [1, 2, 3, 4],
+        "skill_id": [1, 2, 3, 4],
+        "stats_id": [1, 2, 3, 4]
+    },
+    {
+        "name": "Hermione Granger",
+        "image": "imagetest",
+        "bio": "Hermione Granger is a muggle-born wizard who is currently attending Hogwarts. She is good friends with both Ron Weasley and Harry Potter.",
+        "user_id": 1,
+        "ability_id": [1, 2, 3, 4],
+        "skill_id": [10, 13, 1, 2],
+        "stats_id": [5, 3, 1, 6, 4, 7]
+    }
+]

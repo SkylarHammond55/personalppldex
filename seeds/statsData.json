@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Potions",
+        "level": 5
+    },
+    {
+        "name": "Herbology",
+        "level": 2
+    },
+    {
+        "name": "Charms",
+        "level": 12
+    },
+    {
+        "name": "Divination",
+        "level": 0
+    },
+    {
+        "name": "Defense Against the Dark Arts",
+        "level": 10
+    },
+    {
+        "name": "Dark Arts",
+        "level": 14
+    },
+    {
+        "name": "Transfiguration",
+        "level": 4
+    },
+    {
+        "name": "Astrology",
+        "level": 7
+    }
+]
