@@ -14,6 +14,13 @@ Ability.init(
         name: {
             type: DataTypes.STRING(100),
             allowNull: false,
+        },
+        profile_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'profile',
+                key: 'id'
+            }
         }
     },
     {

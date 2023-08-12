@@ -1,44 +1,38 @@
 [
     {
-        "name": "Accio"
+        "name": "Accio",
+        "profile_id": 2
     },
     {
-        "name": "Arresto Momentum"
+        "name": "Arresto Momentum",
+        "profile_id": 2
     },
     {
-        "name": "Avada Kedavra"
+        "name": "Avada Kedavra",
+        "profile_id": 1
     },
     {
-        "name": "Alohomora"
+        "name": "Alohomora",
+        "profile_id": 2
     },
     {
-        "name": "Bombarda"
+        "name": "Bombarda",
+        "profile_id": 1
     },
     {
-        "name": "Confringo"
+        "name": "Confringo",
+        "profile_id": 1
     },
     {
-        "name": "Confundo"
+        "name": "Crucio",
+        "profile_id": 1
     },
     {
-        "name": "Crucio"
+        "name": "Descendo",
+        "profile_id": 2
     },
     {
-        "name": "Depulso"
-    },
-    {
-        "name": "Descendo"
-    },
-    {
-        "name": "Polyjuice Potion"
-    },
-    {
-        "name": "Wiggenweld Potion"
-    },
-    {
-        "name": "Glacius"
-    },
-    {
-        "name": "Reducto"
+        "name": "Polyjuice Potion",
+        "profile_id": 2
     }
 ]
