@@ -28,28 +28,27 @@ Profile.init(
                 key: 'id',
             }
         },
-        ability_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'ability',
-                key: 'id'
-            }
-        },
-        skill_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'skill',
-                key: 'id'
-            }
-        },
-        stats_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'stats',
-                key: 'id'
-            }
-        }
-
+        // ability_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'ability',
+        //         key: 'id'
+        //     }
+        // },
+        // skill_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'skill',
+        //         key: 'id'
+        //     }
+        // },
+        // stats_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'stats',
+        //         key: 'id'
+        //     }
+        // }
     },
     {
         sequelize,

@@ -1,15 +1,19 @@
 [
     {
-        "name": "Animagus"
+        "name": "Animagus",
+        "profile_id": 1
     },
     {
-        "name": "Lycanthropy"
+        "name": "Lycanthropy",
+        "profile_id": 1
     },
     {
-        "name": "Apparition"
+        "name": "Apparition",
+        "profile_id": 1
     },
     {
-        "name": "Parseltongue"
+        "name": "Parseltongue",
+        "profile_id": 1
     },
     {
         "name": "Seer"

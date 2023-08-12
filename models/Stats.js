@@ -18,6 +18,13 @@ Stats.init(
         level: {
             type: DataTypes.INTEGER,
             allowNull: false
+        },
+        profile_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'profile',
+                key: 'id'
+            }
         }
     },
     {
