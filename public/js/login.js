@@ -3,40 +3,39 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
 signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
+    container.classList.add("right-panel-active");
 });
 
 signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
+    container.classList.remove("right-panel-active");
 });
-const signupForm = document.getElementById('signup-form');
 
-signupForm.addEventListener('submit', async (event) => {
+const signupFormHandler = async (event) => {
     event.preventDefault();
 
-    const formData = new FormData(signupForm);
-    const userData = {
-        name: formData.get('signup-name'),
-        email: formData.get('signup-email'),
-        password: formData.get('signup-password')
-    };
+    const username = document.querySelector('#username-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
 
-    try {
-        const response = await fetch('/api/signup', {
+    if (username && email && password) {
+        const response = await fetch('/api/users', {
             method: 'POST',
+            body: JSON.stringify({ username, email, password }),
             headers: {
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
+            }
         });
 
         if (response.ok) {
-            // Refresh the current page to show the login form
-            window.location.reload();
+            // Replace current page with dashboard
+            window.location.replace('/dashboard');
         } else {
-            // Handle error case
+            alert(response.statusText);
         }
-    } catch (error) {
-        // Handle fetch error
     }
-});
+}
+
+
+document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signupFormHandler);
