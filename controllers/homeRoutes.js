@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     res.render('homepage');
 });
 
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
     // Sign-up Route - Creates a new user (Works)
     try {
         const userData = await User.create(req.body);
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
 });
 
 // Login-Route - Logins existing user (Works)
-router.post('/', async (req, res) => {
+router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({
             where: { username: req.body.username }
