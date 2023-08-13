@@ -4,6 +4,7 @@ const withAuth = require('../../utils/auth');
 const multer = require('multer');
 const path = require('path')
 
+// Create character
 router.post('/', withAuth, async (req, res) => {
     try {
         const newProfile = await Profile.create({
@@ -17,10 +18,12 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+// Renders upload option
 router.get('/upload', (req, res) => {
     res.render('upload');
 });
 
+// Upload images
 router.post('/upload', upload.single('image'), withAuth, (req, res) => {
     res.send('Image Uploaded');
 });
