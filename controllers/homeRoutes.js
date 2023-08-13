@@ -14,7 +14,8 @@ router.get('/', async (req, res) => {
     res.render('homepage');
 });
 
-router.post('/', async (req, res) => {
+// Sign-up Route - Creates a new user (Works)
+router.post('/signup', async (req, res) => {
     try {
         const userData = await User.create(req.body);
 
@@ -25,26 +26,42 @@ router.post('/', async (req, res) => {
             res.status(200).json(userData);
         });
     } catch (err) {
-        res.status(400).json(err)
+        res.status(400).json(err);
     }
-})
+});
 
-// router.get('/', async (req, res) => {
-//     try {
-//         // Get all users, sorted by name
-//         const userData = await User.findAll({
-//         attributes: { exclude: ['password'] },
-//         order: [['name', 'ASC']],
-//         });
+// Login-Route - Logins existing user (Works)
+router.post('/login', async (req, res) => {
+    try {
+        const userData = await User.findOne({
+            where: { username: req.body.username }
+        })
 
-//         // Serialize user data so templates can read it
-//         const users = userData.map((project) => project.get({ plain: true }));
+        if (!userData) {
+            res
+            .status(400)
+            .json({ message: 'Incorrect username or password, please try again.'});
+            return;
+        }
 
-//         // Pass serialized data into Handlebars.js template
-//         res.render('homepage', { users });
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
+        const validPassword = await userData.checkPassword(req.body.password);
+
+        if (!validPassword) {
+            res
+            .status(400)
+            .json({ message: 'Incorrect username or password, please try again.'});
+            return;
+        }
+
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+
+            res.json({ user: userData, message: "You are now logged in!"});
+        })
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
 
 module.exports = router;
