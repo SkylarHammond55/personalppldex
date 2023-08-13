@@ -4,7 +4,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
-const multer = require("multer");
+// const multer = require("multer");
 
 const sequelize = require("./config/connection");
 1;
@@ -32,17 +32,17 @@ const sess = {
 
 app.use(session(sess));
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "images");
-  },
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, "images");
+//   },
 
-  filename: (req, file, cb) => {
-    console.log(file);
-    cb(null, Date.now() + path.extname(file.originalname));
-  },
-});
-const upload = multer({ storage: storage });
+//   filename: (req, file, cb) => {
+//     console.log(file);
+//     cb(null, Date.now() + path.extname(file.originalname));
+//   },
+// });
+// const upload = multer({ storage: storage });
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");

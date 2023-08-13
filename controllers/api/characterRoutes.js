@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Profile } = require('../../models');
 const withAuth = require('../../utils/auth');
-const multer = require('multer');
+// const multer = require('multer');
 const path = require('path')
 
 router.post('/', withAuth, async (req, res) => {
