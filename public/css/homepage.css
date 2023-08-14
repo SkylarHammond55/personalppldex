@@ -1,0 +1,76 @@
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: fantasy, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #eee;
+  background-image: url('../images/desktop-wallpaper-hogwarts-harry-potter-hogsmeade.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  color: #444;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 80px;
+  color: #8a0908;
+}
+
+/* .header img {
+  width: 100px;
+} */
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-bottom: 2px solid #8a0908;
+}
+
+.navigation a {
+  color: #8a0908;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+  background-color: #8a0908;
+  color: white;
+}
+
+.main-content {
+  display: grid;
+  place-items: center;
+  margin-top: 20px;
+}
+
+.main-content h2 {
+  color: #8a0908;
+}
+
+.main-content p {
+  margin-top: 20px;
+
+}
