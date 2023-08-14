@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   {{#if '/login'}}
     <link rel="stylesheet" href="/css/login.css">
   {{/if}}
@@ -12,23 +13,44 @@
 </head>
 
 <body>
-  <nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/profile">Dashboard</a></li>
-        {{#if logged_in}}
-        <li><button id="logout">Logout</button></li>
-        {{else}}
-        <li><a href="/login">Login/Sign-up</a></li>
-        {{/if}}
-    </ul>
-  </nav>
   
+<nav class="navbar" role="navigation" aria-label="main navigation">
+	<div id="navbarBasicExample" class="navbar-menu">
+		<div class="navbar-start">
+			{{!-- This is the button that brings you to the home page --}}
+			<a href="/" class="navbar-item">
+				Home
+			</a>
+			{{!-- This is the button that brings you to the profiles page --}}
+			<a href="/profile" class="navbar-item">
+				Profile
+			</a>
+		<div class="navbar-end">
+			<div class="navbar-item">
+				<div class="buttons">
+					{{#if logged_in}}
+					{{!-- This is the button that logs you out --}}
+					<a id="logout" class="button is-light">
+						Logout
+					</a>
+					{{else}}
+					{{!-- This is the button that brings you to the Login/Sign-up page --}}
+					<a href="/login" class="button is-primary">
+						<strong>Login/Sign-up</strong>
+					</a>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
   {{{body}}}
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+{{#if logged_in}}
+	<script src="/js/logout.js"></script>
+{{/if}}
+
 </body>
 
 </html>
