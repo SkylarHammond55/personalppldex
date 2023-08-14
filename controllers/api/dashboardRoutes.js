@@ -25,7 +25,7 @@ const withAuth = require('../../utils/auth');
 //     }
 // })
 
-// TEST: Get route to get single profile data (working in insomnia)
+// TESTING: Get route to get single profile data (working in insomnia)
 // router.get('/:id', async (req, res) => {
 //     try {
 //         const profileData = await Profile.findByPk(req.params.id);
