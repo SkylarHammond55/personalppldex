@@ -41,7 +41,7 @@ router.get('/login', async (req, res) => {
 //     }
 // })
 
-router.get('/character/:id', async (req, res) => {
+router.get('/profile/:id', async (req, res) => {
     try {
         const profileData = await Profile.findByPk(req.params.id, {
             include: [
@@ -60,7 +60,7 @@ router.get('/character/:id', async (req, res) => {
 
         const profile = profileData.get({ plain: true });
 
-        res.render('project', {
+        res.render('profile', {
             ...profile,
             logged_in: req.session.logged_in
         })
