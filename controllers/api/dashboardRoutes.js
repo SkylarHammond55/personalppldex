@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Profile = require('../../models/Profile');
+const { Profile } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Gets User based on id and includes profile data for specific user
@@ -25,21 +25,21 @@ const withAuth = require('../../utils/auth');
 //     }
 // })
 
-// TEST: Get route to get single profile data (working in insomnia)
-router.get('/:id', async (req, res) => {
-    try {
-        const profileData = await Profile.findByPk(req.params.id);
+// TESTING: Get route to get single profile data (working in insomnia)
+// router.get('/:id', async (req, res) => {
+//     try {
+//         const profileData = await Profile.findByPk(req.params.id);
 
-        if (!profileData) {
-            res.status(404).json({ message: 'No profile found with this id!'});
-            return;
-        }
+//         if (!profileData) {
+//             res.status(404).json({ message: 'No profile found with this id!'});
+//             return;
+//         }
 
-        res.status(200).json(profileData);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+//         res.status(200).json(profileData);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 // Testing: Delete route to delete single profile (working in Insomnia)
 // router.delete('/:id', async (req, res) => {

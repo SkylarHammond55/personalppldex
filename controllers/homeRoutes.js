@@ -4,8 +4,7 @@
 // It routes commands to the Model and View parts.
 
 const router = require('express').Router();
-const { User } = require('../models');
-const Profile = require('../models/Profile')
+const { User, Profile, Skill, Stats } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET route for getting all of the dishes that are on the menu
@@ -41,6 +40,34 @@ router.get('/login', async (req, res) => {
 //         res.status(500).json(err)
 //     }
 // })
+
+router.get('/character/:id', async (req, res) => {
+    try {
+        const profileData = await Profile.findByPk(req.params.id, {
+            include: [
+                {
+                    model: Stats,
+                    attributes: ['name', 'level']
+                },
+                {
+                    model: Skill,
+                    attributes: ['name']
+                }
+            ]
+        });
+
+        // res.status(200).json(profileData)
+
+        const profile = profileData.get({ plain: true });
+
+        res.render('project', {
+            ...profile,
+            logged_in: req.session.logged_in
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 // Gets User based on id and includes profile data for specific user
 router.get('/dashboard', withAuth, async (req, res) => {

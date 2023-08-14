@@ -5,7 +5,7 @@
     {{#if profiles.length}}
     <ul>
         {{#each profiles as |profile|}}
-        <h3><a href="/dashboard/{{profile.id}}">{{profile.name}}</a></h3>
+        <h3><a href="/character/{{profile.id}}">{{profile.name}}</a></h3>
         <button data-id="{{profile.id}}" id="delete-button">Delete</button>
         {{!-- <li><a href="#">{{this.name}}</a></li> --}}
         {{/each}}
