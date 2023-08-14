@@ -1,11 +1,9 @@
-{{!-- {{> partials/navbar}} --}}
-
 <div class="profiles-list">
     <h2>Profiles List</h2>
     {{#if profiles.length}}
     <ul>
         {{#each profiles as |profile|}}
-        <h3><a href="/character/{{profile.id}}">{{profile.name}}</a></h3>
+        <h3><a href="/profile/{{profile.id}}">{{profile.name}}</a></h3>
         <button data-id="{{profile.id}}" id="delete-button">Delete</button>
         {{!-- <li><a href="#">{{this.name}}</a></li> --}}
         {{/each}}
@@ -14,7 +12,7 @@
 </div>
 
 <div class="create-character-button">
-    <a href="/character">Create New Character</a>
+    <a href="/create">Create New Character</a>
 </div>
 
 {{!--
