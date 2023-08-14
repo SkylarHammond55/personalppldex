@@ -10,6 +10,7 @@ signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
 });
 
+// Handles login
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
@@ -17,6 +18,7 @@ const loginFormHandler = async (event) => {
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
+    // Check both inputs and fetches to the login post under api/users
     if (username && password) {
         const response = await fetch ('/api/users/login', {
             method: 'POST',
@@ -25,6 +27,7 @@ const loginFormHandler = async (event) => {
         });
 
         if (response.ok) {
+            // Directs to dashboard
             document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
@@ -32,13 +35,16 @@ const loginFormHandler = async (event) => {
     }
 };
 
+// Form that handles signup
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
+    // Collects input values
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
+    // Checks that values were given before running the POST method from api/users
     if (username && email && password) {
         const response = await fetch('/api/users', {
             method: 'POST',

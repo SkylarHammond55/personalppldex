@@ -5,65 +5,42 @@
 
 const router = require('express').Router();
 const { User } = require('../models');
+const Profile = require('../models/Profile')
 const withAuth = require('../utils/auth');
 
-// Add a comment describing the purpose of the 'get' route
 // GET route for getting all of the dishes that are on the menu
 router.get('/', async (req, res) => {
-    // Add a comment describing the purpose of the render method
     // This method is rendering the 'homepage' handlebars.js template. This is how we connect each route to the correct template.
-    res.render('homepage');
+    res.render('homepage', {
+        logged_in: req.session.logged_in,
+    });
 });
 
-// // Sign-up Route - Creates a new user (Works)
-// router.post('/signup', async (req, res) => {
+router.get('/login', async (req, res) => {
+    res.render('login', {
+        logged_in: req.session.logged_in,
+    })
+})
+
+// Testing: Get route to test getting user with profile data
+// router.get('/dashboard/:id', async (req, res) => {
 //     try {
-//         const userData = await User.create(req.body);
-
-//         req.session.save(() => {
-//             req.session.user_id = userData.id;
-//             req.session.logged_in = true;
-
-//             res.status(200).json(userData);
-//         });
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
-
-// // Login-Route - Logins existing user (Works)
-// router.post('/login', async (req, res) => {
-//     try {
-//         const userData = await User.findOne({
-//             where: { username: req.body.username }
+//         const userData = await User.findByPk(req.params.id, {
+//             include: [{
+//                 model: Profile
+//             }]
 //         })
 
-//         if (!userData) {
-//             res
-//             .status(400)
-//             .json({ message: 'Incorrect username or password, please try again.'});
+//         if(!userData) {
+//             res.status(404).json({ message: 'No data found with this id!' });
 //             return;
 //         }
 
-//         const validPassword = await userData.checkPassword(req.body.password);
-
-//         if (!validPassword) {
-//             res
-//             .status(400)
-//             .json({ message: 'Incorrect username or password, please try again.'});
-//             return;
-//         }
-
-//         req.session.save(() => {
-//             req.session.user_id = userData.id;
-//             req.session.logged_in = true;
-
-//             res.json({ user: userData, message: "You are now logged in!"});
-//         })
+//         res.status(200).json(userData)
 //     } catch (err) {
-//         res.status(400).json(err);
+//         res.status(500).json(err)
 //     }
-// });
+// })
 
 // Gets User based on id and includes profile data for specific user
 router.get('/dashboard', withAuth, async (req, res) => {
@@ -96,7 +73,6 @@ router.get('/login', (req, res) => {
         res.redirect('/');
         return;
     }
-
     res.render('login');
 });
 

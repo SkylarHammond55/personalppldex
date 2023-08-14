@@ -1,21 +1,28 @@
-{{> partials/navbar}}
+{{!-- {{> partials/navbar}} --}}
 
 <div class="profiles-list">
-        <h2>Profiles List</h2>
-        <ul>
-            {{#each profiles}}
-            <li><a href="#">{{this.name}}</a></li>
-            {{/each}}
-        </ul>
-    </div>
-    
-    <div class="create-character-button">
-        <a href="character-creator.html">Create New Character</a>
-    </div>
-    
-    <script src="handlebars.min.js"></script>
-    <script src="script.js"></script>
+    <h2>Profiles List</h2>
+    {{#if profiles.length}}
+    <ul>
+        {{#each profiles as |profile|}}
+        <h3><a href="/dashboard/{{profile.id}}">{{profile.name}}</a></h3>
+        <button data-id="{{profile.id}}" id="delete-button">Delete</button>
+        {{!-- <li><a href="#">{{this.name}}</a></li> --}}
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
+
+<div class="create-character-button">
+    <a href="/character">Create New Character</a>
+</div>
+
+{{!--
+<script src="handlebars.min.js"></script> --}}
+{{!--
+<script src="script.js"></script> --}}
 </body>
+
 </html>
 
-<script src="/public/js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script>
