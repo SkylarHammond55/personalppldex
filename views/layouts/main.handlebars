@@ -12,10 +12,23 @@
 </head>
 
 <body>
+  <nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/profile">Dashboard</a></li>
+        {{#if logged_in}}
+        <li><button id="logout">Logout</button></li>
+        {{else}}
+        <li><a href="/login">Login/Sign-up</a></li>
+        {{/if}}
+    </ul>
+  </nav>
   
   {{{body}}}
 
-  <script src="script.js"></script>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
