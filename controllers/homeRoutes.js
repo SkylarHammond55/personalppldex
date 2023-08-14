@@ -5,6 +5,7 @@
 
 const router = require('express').Router();
 const { User } = require('../models');
+const withAuth = require('../utils/auth');
 
 // Add a comment describing the purpose of the 'get' route
 // GET route for getting all of the dishes that are on the menu
@@ -64,10 +65,35 @@ router.get('/', async (req, res) => {
 //     }
 // });
 
+// Gets User based on id and includes profile data for specific user
+router.get('/dashboard', withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [{
+                model: Profile,
+                attributes: ['name', 'image'],
+            }],
+        });
+
+        // res.status(200).json(userData)
+        const user = userData.get({ plain: true });
+
+        // Renders dashboard.handlebars
+        res.render('dashboard', {
+            ...user,
+            logged_in: true
+        });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-        res.redirect('/dashboard');
+        res.redirect('/');
         return;
     }
 
