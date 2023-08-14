@@ -42,4 +42,4 @@ Stats.belongsTo(Profile, {
 })
 
 
-module.exports = { User };
+module.exports = { User, Profile, Stats, Skill };
