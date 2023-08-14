@@ -2,9 +2,9 @@ const router = require('express').Router();
 const { Profile } = require('../../models');
 const withAuth = require('../../utils/auth');
 // const multer = require('multer');
-const path = require('path')
+// const path = require('path')
 
-// Create character
+// Create character (working in insomnia)
 router.post('/', withAuth, async (req, res) => {
     try {
         const newProfile = await Profile.create({
@@ -18,12 +18,15 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-// Renders upload option
-router.get('/upload', (req, res) => {
-    res.render('upload');
-});
+// // Renders upload option
+// router.get('/upload', (req, res) => {
+//     res.render('upload');
+// });
 
-// Upload images
-router.post('/upload', upload.single('image'), withAuth, (req, res) => {
-    res.send('Image Uploaded');
-});
+// // Upload images
+// router.post('/upload', upload.single('image'), withAuth, (req, res) => {
+//     res.send('Image Uploaded');
+// });
+
+
+module.exports = router;
