@@ -4,8 +4,7 @@
 // It routes commands to the Model and View parts.
 
 const router = require('express').Router();
-const { User } = require('../models');
-const Profile = require('../models/Profile')
+const { User, Profile } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET route for getting all of the dishes that are on the menu

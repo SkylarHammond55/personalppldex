@@ -12,23 +12,23 @@ const skillData = require('./skillData')
 
 const seedDatabase = async () => {
         await sequelize.sync({ force: true });
-        
+
         await userData();
         await profileData();
         await statsData();
         await skillData();
-    
+
         // await User.bulkCreate(userData, {
         //     individualHooks: true,
         //     returning: true,
         // });
-    
+
         // await Profile.bulkCreate(profileData)
-    
+
         // await Ability.bulkCreate(abilityData);
-    
+
         // await Stats.bulkCreate(statsData);
-    
+
         // await Skill.bulkCreate(skillData)
 
         process.exit(0);
