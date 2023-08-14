@@ -49,7 +49,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
             attributes: { exclude: ['password'] },
             include: [{
                 model: Profile,
-                attributes: ['name', 'image'],
+                attributes: ['id', 'name', 'image'],
             }],
         });
 
