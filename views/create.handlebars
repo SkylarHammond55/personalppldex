@@ -13,27 +13,26 @@
       <input type="text" id="age" name="age">
       <label for="location">Location/School:</label>
       <input type="text" id="location" name="location">
-      <label for="alignment">Alignment:</label>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Lawful Good</a></li>
-              <li><a href="#">Neutral Good</a></li>
-              <li><a href="#">Chaotic Good</a></li>
-              <li><a href="#">Lawful Neutral</a></li>
-              <li><a href="#">True Neutral</a></li>
-              <li><a href="#">Chaotic Neutral</a></li>
-              <li><a href="#">Lawful Evil</a></li>
-              <li><a href="#">Neutral Evil</a></li>
-              <li><a href="#">Chaotic Evil</a></li>
-            </ul>
-          </li>
-        </ul>
+
+          <div class="select">
+            <select name="alignment" id="align-select">
+              <option value="lawfull-good">Lawful Good</option>
+              <option value="netural-good">Neutral Good</option>
+              <option value="chaotic-good">Chaotic Good</option>
+              <option value="lawfull-netural">Lawful Neutral</option>
+              <option value="true-netural">True Neutral</option>
+              <option value="chaotic-netural">Chaotic Neutral</option>
+              <option value="lawful-evil">Lawful Evil</option>
+              <option value="neutral-evil">Neutral Evil</option>
+              <option value="chaotic-evil">Chaotic Evil</option>
+            </select>
+          </div>
+
       <label for="bio">Bio:</label>
       <textarea id="bio" name="bio"></textarea>
     </form>
   </div>
-{{!-- Will fix later --}}
+  {{!-- Will fix later --}}
   <div class="right">
     <div class="stats">
       Stats:
@@ -47,14 +46,14 @@
       <input type="text" placeholder="Level">
       {{/each}}
     </div>
-  
+
     <div class="abilities">
       Abilities:
       {{#each abilities}}
       <input type="text" placeholder="{{this}}">
       {{/each}}
     </div>
-  
+
     <div class="skills">
       Skills:
       {{#each skills}}
@@ -62,4 +61,4 @@
       {{/each}}
     </div>
   </div>
-  </div>
+</div>
