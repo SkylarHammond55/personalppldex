@@ -6,7 +6,11 @@
     <h2><label for="characterName">Character Name:</label></h2>
     <input type="text" id="characterName" name="characterName">
 
-    <img src="placeholder.jpg" alt="Placeholder Image">
+    <h2>Upload Image</h2>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+      <input type="file" name="image" id="character-image">
+      <input type="submit">
+    </form>
 
     <h2><label for="age">Age:</label></h2>
     <input type="text" id="age" name="age">
