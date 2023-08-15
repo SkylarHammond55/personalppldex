@@ -1,7 +1,20 @@
-{{> navbar}}
-
-<div>
-    <h1>THIS IS THE PROFILE PAGE</h1>
-    <h2>{{name}}</h2>
-    <p>{{bio}}</p>
+<div class="box">{{> navbar}}</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="/css/profile.css">
+<div style='margin-top: 40px;'>
+    <h1 class="box">{{name}}</h1>
+    <div class="box columns">
+        <img class="box column is-2" src="https://w7.pngwing.com/pngs/680/414/png-transparent-hermione-granger-harry-potter-and-the-philosopher-s-stone-ron-weasley-draco-malfoy-emma-watson-pop-art-celebrities-face-head.png">
+        <div class="box column margin"><strong>Skills: </strong><hr>
+        {{#each skills as |skill|}}
+        <p>{{skill.name}}</p>
+        {{/each}}
+        </div>
+        <div class="box column"><strong>Stats: </strong><hr>
+        {{#each stats as |stat|}}
+        <p>{{stat.name}}</p>
+        {{/each}}
+        </div>
+    </div>
+    <h2 class="box tile">Bio: {{bio}}</h2>
 </div>

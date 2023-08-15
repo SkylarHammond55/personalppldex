@@ -53,23 +53,23 @@ router.get('/profile/:id', async (req, res) => {
             include: [
                 {
                     model: Stats,
-                    attributes: ['name', 'level']
+                    attributes: ['id', 'name', 'level']
                 },
                 {
                     model: Skill,
-                    attributes: ['name']
+                    attributes: ['id', 'name']
                 }
             ]
         });
 
-        res.status(200).json(profileData)
+        // res.status(200).json(profileData)
 
-        // const profile = profileData.get({ plain: true });
+        const profile = profileData.get({ plain: true });
 
-        // res.render('profile', {
-        //     ...profile,
-        //     logged_in: req.session.logged_in
-        // })
+        res.render('profile', {
+            ...profile,
+            logged_in: req.session.logged_in
+        })
     } catch (err) {
         res.status(500).json(err);
     }
