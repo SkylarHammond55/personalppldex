@@ -1,16 +1,26 @@
 const router = require('express').Router();
-const { Profile } = require('../../models');
+const { Profile, Stats, Skill } = require('../../models');
 const withAuth = require('../../utils/auth');
 // const multer = require('multer');
 // const path = require('path')
 
-// Create character (working in insomnia)
+// Create character (working in insomnia for profile only)
 router.post('/', withAuth, async (req, res) => {
     try {
         const newProfile = await Profile.create({
             ...req.body,
             user_id: req.session.user_id,
         });
+
+        // const newStats = await Stats.create(req.body);
+
+        // const newSkill = await Skill.create(req.body);
+
+        // const newCharacter = {
+        //     ...newProfile,
+        //     ...newSkill,
+        //     ...newStats
+        // };
 
         res.status(200).json(newProfile);
     } catch (err) {

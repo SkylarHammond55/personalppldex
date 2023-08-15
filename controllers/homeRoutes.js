@@ -19,6 +19,12 @@ router.get('/login', async (req, res) => {
     res.render('login', {
         logged_in: req.session.logged_in,
     })
+});
+
+router.get('/create', async (req, res) => {
+    res.render('create', {
+        logged_in: req.session.logged_in,
+    })
 })
 
 // Testing: Get route to test getting user with profile data
@@ -56,14 +62,14 @@ router.get('/profile/:id', async (req, res) => {
             ]
         });
 
-        // res.status(200).json(profileData)
+        res.status(200).json(profileData)
 
-        const profile = profileData.get({ plain: true });
+        // const profile = profileData.get({ plain: true });
 
-        res.render('profile', {
-            ...profile,
-            logged_in: req.session.logged_in
-        })
+        // res.render('profile', {
+        //     ...profile,
+        //     logged_in: req.session.logged_in
+        // })
     } catch (err) {
         res.status(500).json(err);
     }
