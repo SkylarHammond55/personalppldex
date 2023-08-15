@@ -1,3 +1,5 @@
+{{> navbar}}
+
 <link rel="stylesheet" href="/css/login.css">
 
 <div class="profiles-list">
@@ -7,7 +9,6 @@
         {{#each profiles as |profile|}}
         <h3><a href="/profile/{{profile.id}}">{{profile.name}}</a></h3>
         <button data-id="{{profile.id}}" id="delete-button">Delete</button>
-        {{!-- <li><a href="#">{{this.name}}</a></li> --}}
         {{/each}}
     </ul>
     {{/if}}
