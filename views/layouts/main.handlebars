@@ -4,9 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-{{!--
-<link rel="stylesheet" href="/css/style.css"> --}}
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
@@ -14,39 +12,9 @@
 </head>
 
 <body>
-  
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-	<div id="navbarBasicExample" class="navbar-menu">
-		<div class="navbar-start">
-			{{!-- This is the button that brings you to the home page --}}
-			<a href="/" class="navbar-item">
-				Home
-			</a>
-			{{!-- This is the button that brings you to the profiles page --}}
-			<a href="/dashboard" class="navbar-item">
-				Dashboard
-			</a>
-	</div>
-		<div class="navbar-end">
-			<div class="navbar-item">
-				<div class="buttons">
-					{{#if logged_in}}
-					{{!-- This is the button that logs you out --}}
-					<a id="logout" class="button is-light">
-						Logout
-					</a>
-					{{else}}
-					{{!-- This is the button that brings you to the Login/Sign-up page --}}
-					<a href="/login" class="button is-primary">
-						<strong>Login/Sign-up</strong>
-					</a>
-					{{/if}}
-				</div>
-			</div>
-		</div>
-</nav>
 
-  {{{body}}}
+
+{{{body}}}
 
 {{#if logged_in}}
 	<script src="/js/logout.js"></script>
