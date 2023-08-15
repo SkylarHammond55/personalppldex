@@ -39,12 +39,12 @@ const createBtnHandler = async (event) => {
   event.preventDefault();
 
   // Profile input values
+  const bio = document.querySelector('#bio').value.trim();
   const name = document.querySelector('#characterName').value.trim();
   // const image = document.querySelector('#character-image');
   // const age = document.querySelector('#age').value.trim();
   // const location = document.querySelector('#location').value.trim();
   // const alignment = document.querySelector('#align-select').value.trim();
-  const bio = document.querySelector('#bio').value.trim();
 
   // Stats input values
   const statsName1 = document.querySelector('#stat-select-1').value.trim();
@@ -67,6 +67,29 @@ const createBtnHandler = async (event) => {
   const skillName4 = document.querySelector('#skill-4').value.trim();
   const skillName5 = document.querySelector('#skill-5').value.trim();
   const skillName6 = document.querySelector('#skill-6').value.trim();
+
+  const skills = [
+    {
+      name: skillName1
+    },
+    {
+      name: skillName2
+    },
+    {
+      name: skillName3
+    },
+    {
+      name: skillName4
+    },
+    {
+      name: skillName5
+    },
+    {
+      name: skillName6
+    }
+  ]
+
+  // console.log(skills)
   
   const stats = [
     {
@@ -97,46 +120,24 @@ const createBtnHandler = async (event) => {
 
   // console.log(stats)
 
-  const skills = [
-    {
-      name: skillName1
-    },
-    {
-      name: skillName2
-    },
-    {
-      name: skillName3
-    },
-    {
-      name: skillName4
-    },
-    {
-      name: skillName5
-    },
-    {
-      name: skillName6
-    }
-  ]
-
-  // console.log(skills)
   
   const profile = {
     name: name,
+    bio: bio,
+    stats: stats,
+    skills: skills,
     // img: image,
     // age: age,
     // location: location,
     // alignment: alignment,
-    bio: bio,
-    stats: [{stats}],
-    skills: [{skills}]
   }
 
-  // console.log(profile)
+  // console.log(JSON.stringify(profile))
 
   if (profile) {
     const response = await fetch('api/create', {
       method: 'POST',
-      body: JSON.stringify({ profile }),
+      body: JSON.stringify(profile),
       headers: {
         'Content-Type': 'application/json'
       }
