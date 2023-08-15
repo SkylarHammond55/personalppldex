@@ -1,0 +1,13 @@
+.is-primary {
+  background-color: darkred;
+  color: gold;
+
+}
+
+.custom-navbar-color {
+  background-color: darkred;
+}
+
+.custom-navbar-text-color {
+  color: gold;
+}
