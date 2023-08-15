@@ -4,19 +4,23 @@
 
 <div class="content">
 
-  <form class="create-character">
+  <form class="create-character-form">
     <h2><label for="characterName">Character Name:</label></h2>
     <input type="text" id="characterName" name="characterName">
 
-    <img src="placeholder.jpg" alt="Placeholder Image">
+    {{!-- <h2>Upload Image</h2>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+      <input type="file" name="image" id="character-image">
+      <input type="submit">
+    </form> --}}
 
-    <h2><label for="age">Age:</label></h2>
+    {{!-- <h2><label for="age">Age:</label></h2>
     <input type="text" id="age" name="age">
 
     <h2><label for="location">Location/School:</label></h2>
-    <input type="text" id="location" name="location">
+    <input type="text" id="location" name="location"> --}}
 
-    <h3><label for="alignment">Alignment</label></h3>
+    {{!-- <h3><label for="alignment">Alignment</label></h3>
     <div class="select">
       <select name="alignment" id="align-select">
         <option value="lawfull-good">Lawful Good</option>
@@ -29,7 +33,7 @@
         <option value="neutral-evil">Neutral Evil</option>
         <option value="chaotic-evil">Chaotic Evil</option>
       </select>
-    </div>
+    </div> --}}
 
     <label for="bio">Bio:</label>
     <textarea id="bio" name="bio"></textarea>
@@ -44,78 +48,38 @@
 
             <section>
               <div class="select">
-                <select name="stats" id="stat-select">
-                  <option value="">Potions</option>
-                  <option value="">Herbology</option>
-                  <option value="">Charms</option>
-                  <option value="">Flying</option>
-                  <option value="">Defense Against the Dark Arts</option>
-                  <option value="">Dark Arts</option>
-                  <option value="">Divination</option>
-                  <option value="">Transfiguration</option>
-                  <option value="">Magical Creatures</option>
-                  <option value="">Astrology</option>
+                <select name="stats" id="stat-select-1">
+                  <option value="Potions">Potions</option>
+                  <option value="Herbology">Herbology</option>
+                  <option value="Charms">Charms</option>
+                  <option value="Flying">Flying</option>
+                  <option value="Defense Against the Dark Arts">Defense Against the Dark Arts</option>
+                  <option value="Dark Art">Dark Arts</option>
+                  <option value="Divination">Divination</option>
+                  <option value="Transfiguration">Transfiguration</option>
+                  <option value="Magical Creatures">Magical Creatures</option>
+                  <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level" name="level" placeholder="level">
+              <input type="text" id="level-1" name="level" placeholder="level">
             </section>
 
             <section>
               <div class="select">
-                <select name="stats" id="stat-select">
-                  <option value="">Potions</option>
-                  <option value="">Herbology</option>
-                  <option value="">Charms</option>
-                  <option value="">Flying</option>
-                  <option value="">Defense Against the Dark Arts</option>
-                  <option value="">Dark Arts</option>
-                  <option value="">Divination</option>
-                  <option value="">Transfiguration</option>
-                  <option value="">Magical Creatures</option>
-                  <option value="">Astrology</option>
+                <select name="stats" id="stat-select-2">
+                  <option value="Potions">Potions</option>
+                  <option value="Herbology">Herbology</option>
+                  <option value="Charms">Charms</option>
+                  <option value="Flying">Flying</option>
+                  <option value="Defense Against the Dark Arts">Defense Against the Dark Arts</option>
+                  <option value="Dark Art">Dark Arts</option>
+                  <option value="Divination">Divination</option>
+                  <option value="Transfiguration">Transfiguration</option>
+                  <option value="Magical Creatures">Magical Creatures</option>
+                  <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level" name="level" placeholder="level">
-            </section>
-
-          </div>
-
-          <div class="column">
-
-            <section>
-              <div class="select">
-                <select name="stats" id="stat-select">
-                  <option value="">Potions</option>
-                  <option value="">Herbology</option>
-                  <option value="">Charms</option>
-                  <option value="">Flying</option>
-                  <option value="">Defense Against the Dark Arts</option>
-                  <option value="">Dark Arts</option>
-                  <option value="">Divination</option>
-                  <option value="">Transfiguration</option>
-                  <option value="">Magical Creatures</option>
-                  <option value="">Astrology</option>
-                </select>
-              </div>
-              <input type="text" id="level" name="level" placeholder="level">
-            </section>
-
-            <section>
-              <div class="select">
-                <select name="stats" id="stat-select">
-                  <option value="">Potions</option>
-                  <option value="">Herbology</option>
-                  <option value="">Charms</option>
-                  <option value="">Flying</option>
-                  <option value="">Defense Against the Dark Arts</option>
-                  <option value="">Dark Arts</option>
-                  <option value="">Divination</option>
-                  <option value="">Transfiguration</option>
-                  <option value="">Magical Creatures</option>
-                  <option value="">Astrology</option>
-                </select>
-              </div>
-              <input type="text" id="level" name="level" placeholder="level">
+              <input type="text" id="level-2" name="level" placeholder="level">
             </section>
 
           </div>
@@ -124,38 +88,78 @@
 
             <section>
               <div class="select">
-                <select name="stats" id="stat-select">
-                  <option value="">Potions</option>
-                  <option value="">Herbology</option>
-                  <option value="">Charms</option>
-                  <option value="">Flying</option>
-                  <option value="">Defense Against the Dark Arts</option>
-                  <option value="">Dark Arts</option>
-                  <option value="">Divination</option>
-                  <option value="">Transfiguration</option>
-                  <option value="">Magical Creatures</option>
-                  <option value="">Astrology</option>
+                <select name="stats" id="stat-select-3">
+                  <option value="Potions">Potions</option>
+                  <option value="Herbology">Herbology</option>
+                  <option value="Charms">Charms</option>
+                  <option value="Flying">Flying</option>
+                  <option value="Defense Against the Dark Arts">Defense Against the Dark Arts</option>
+                  <option value="Dark Art">Dark Arts</option>
+                  <option value="Divination">Divination</option>
+                  <option value="Transfiguration">Transfiguration</option>
+                  <option value="Magical Creatures">Magical Creatures</option>
+                  <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level" name="level" placeholder="level">
+              <input type="text" id="level-3" name="level" placeholder="level">
             </section>
 
             <section>
               <div class="select">
-                <select name="stats" id="stat-select">
-                  <option value="">Potions</option>
-                  <option value="">Herbology</option>
-                  <option value="">Charms</option>
-                  <option value="">Flying</option>
-                  <option value="">Defense Against the Dark Arts</option>
-                  <option value="">Dark Arts</option>
-                  <option value="">Divination</option>
-                  <option value="">Transfiguration</option>
-                  <option value="">Magical Creatures</option>
-                  <option value="">Astrology</option>
+                <select name="stats" id="stat-select-4">
+                  <option value="Potions">Potions</option>
+                  <option value="Herbology">Herbology</option>
+                  <option value="Charms">Charms</option>
+                  <option value="Flying">Flying</option>
+                  <option value="Defense Against the Dark Arts">Defense Against the Dark Arts</option>
+                  <option value="Dark Art">Dark Arts</option>
+                  <option value="Divination">Divination</option>
+                  <option value="Transfiguration">Transfiguration</option>
+                  <option value="Magical Creatures">Magical Creatures</option>
+                  <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level" name="level" placeholder="level">
+              <input type="text" id="level-4" name="level" placeholder="level">
+            </section>
+
+          </div>
+
+          <div class="column">
+
+            <section>
+              <div class="select">
+                <select name="stats" id="stat-select-5">
+                  <option value="Potions">Potions</option>
+                  <option value="Herbology">Herbology</option>
+                  <option value="Charms">Charms</option>
+                  <option value="Flying">Flying</option>
+                  <option value="Defense Against the Dark Arts">Defense Against the Dark Arts</option>
+                  <option value="Dark Art">Dark Arts</option>
+                  <option value="Divination">Divination</option>
+                  <option value="Transfiguration">Transfiguration</option>
+                  <option value="Magical Creatures">Magical Creatures</option>
+                  <option value="Astrology">Astrology</option>
+                </select>
+              </div>
+              <input type="text" id="level-5" name="level" placeholder="level">
+            </section>
+
+            <section>
+              <div class="select">
+                <select name="stats" id="stat-select-6">
+                  <option value="Potions">Potions</option>
+                  <option value="Herbology">Herbology</option>
+                  <option value="Charms">Charms</option>
+                  <option value="Flying">Flying</option>
+                  <option value="Defense Against the Dark Arts">Defense Against the Dark Arts</option>
+                  <option value="Dark Art">Dark Arts</option>
+                  <option value="Divination">Divination</option>
+                  <option value="Transfiguration">Transfiguration</option>
+                  <option value="Magical Creatures">Magical Creatures</option>
+                  <option value="Astrology">Astrology</option>
+                </select>
+              </div>
+              <input type="text" id="level-6" name="level" placeholder="level">
             </section>
 
           </div>
@@ -169,25 +173,28 @@
         <div class="columns">
 
           <div class="column">
-            <input type="text" id="skill" placeholder="skill">
-            <input type="text" id="skill" placeholder="skill">
+            <input type="text" id="skill-1" placeholder="skill">
+            <input type="text" id="skill-2" placeholder="skill">
           </div>
 
           <div class="column">
-            <input type="text" id="skill" placeholder="skill">
-            <input type="text" id="skill" placeholder="skill">
+            <input type="text" id="skill-3" placeholder="skill">
+            <input type="text" id="skill-4" placeholder="skill">
           </div>
 
           <div class="column">
-            <input type="text" id="skill" placeholder="skill">
-            <input type="text" id="skill" placeholder="skill">
+            <input type="text" id="skill-5" placeholder="skill">
+            <input type="text" id="skill-6" placeholder="skill">
           </div>
 
         </div>
 
       </div>
 
+      <button class="button is-black create-character">Submit</button>
+
   </form>
 
-  <button class="button is-black create-character">Submit</button>
 </div>
+
+<script src="/js/create.js"></script>
