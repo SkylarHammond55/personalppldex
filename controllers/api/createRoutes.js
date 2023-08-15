@@ -5,11 +5,11 @@ const withAuth = require('../../utils/auth');
 // const path = require('path')
 
 // Create character (working in insomnia for profile only)
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const newProfile = await Profile.create({
             ...req.body,
-            // user_id: req.session.user_id,
+            user_id: req.session.user_id,
         });
         
         let newStats;
@@ -17,9 +17,11 @@ router.post('/', async (req, res) => {
             newStats = await Stats.bulkCreate(req.body.stats.map(stat => ({...stat, profile_id: newProfile.id})));
         }
 
-        // if (req.body.skill)
+        let newSkill;
+        if (req.body.skill) {
+            newSkill = await Skill.bulkCreate(req.body.skills.map(skill => ({...skill, profile_id: newProfile.id})));
+        }
 
-        const newSkill = await Skill.bulkCreate(req.body.skills.map(skill => ({...skill, profile_id: newProfile.id})));
 
         const newCharacter = {
             ...newProfile,
