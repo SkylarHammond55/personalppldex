@@ -21,7 +21,7 @@ router.get('/login', async (req, res) => {
     })
 });
 
-router.get('/create', async (req, res) => {
+router.get('/create', withAuth, async (req, res) => {
     res.render('create', {
         logged_in: req.session.logged_in,
     })
@@ -47,7 +47,7 @@ router.get('/create', async (req, res) => {
 //     }
 // })
 
-router.get('/profile/:id', async (req, res) => {
+router.get('/profile/:id', withAuth, async (req, res) => {
     try {
         const profileData = await Profile.findByPk(req.params.id, {
             include: [

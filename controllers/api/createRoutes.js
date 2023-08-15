@@ -18,7 +18,7 @@ router.post('/', withAuth, async (req, res) => {
         }
 
         let newSkill;
-        if (req.body.skill) {
+        if (req.body.skills.length) {
             newSkill = await Skill.bulkCreate(req.body.skills.map(skill => ({...skill, profile_id: newProfile.id})));
         }
 
