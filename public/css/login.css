@@ -13,6 +13,7 @@ body {
 	font-family: 'Caveat', cursive;
 	height: 100vh;
 	margin: -20px 0 50px;
+	
 }
 
 h1 {
@@ -39,7 +40,7 @@ span {
 
 a {
 	color: #333;
-	font-size: 14px;
+	/* font-size: 14px; */
 	text-decoration: none;
 	margin: 15px 0;
 }
