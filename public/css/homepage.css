@@ -10,7 +10,7 @@ p {
 body {
   font-family: fantasy, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #eee;
-  background-image: url('../images/desktop-wallpaper-hogwarts-harry-potter-hogsmeade.jpg');
+  background-image: url('/images/hogwarts\ pic.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */

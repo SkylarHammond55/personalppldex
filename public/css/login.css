@@ -6,6 +6,9 @@
 
 body {
 	background: #f6f5f7;
+	background-image: url('../images/harry-potter-gryffindor-hufflepuff-ravenclaw-wallpaper-preview.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
