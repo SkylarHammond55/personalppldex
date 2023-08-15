@@ -1,6 +1,7 @@
 body {
     font-family: 'Caveat', cursive;
-    background-color: #eee;
+    background-color: darkred;
+    background-image: url('../images/USH_Hogwarts2_VB.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     color: #444;
