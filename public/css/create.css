@@ -1,6 +1,5 @@
 body {
     font-family: 'Caveat', cursive;
-    background-color: gold;
     background-size: cover;
     background-repeat: no-repeat;
     color: #444;
@@ -36,6 +35,7 @@ body {
 .box {
     margin-left: 20px;
     margin-right: 20px;
+    background-color: rgba(255, 217, 0, 0.871);
 }
 
 img {
@@ -51,8 +51,7 @@ img {
 }
 
 body {
-    background: gold;
-    background-image: url('../images/harry-potter-gryffindor-hufflepuff-ravenclaw-wallpaper-preview.jpg');
+    background-image: url('../images/Magic-doodles.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -120,7 +119,6 @@ button.ghost {
 }
 
 form {
-    background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,7 +137,6 @@ input {
 }
 
 .container {
-    background-color: gold;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
@@ -218,7 +215,6 @@ input {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
-    color: gold;
     position: relative;
     left: -100%;
     height: 100%;
@@ -301,4 +297,8 @@ footer i {
 footer a {
     color: #3c97bf;
     text-decoration: none;
+}
+
+.fonty {
+    font-size: 20px;
 }

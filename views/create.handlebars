@@ -1,27 +1,37 @@
 {{> navbar}}
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="/css/navbar.css">
 <link rel="stylesheet" href="/css/create.css">
 
 <div class="content" style = 'margin-top: 300px;'>
 
   <form class="create-character-form">
-    <h2><label for="characterName">Character Name:</label></h2>
-    <input type="text" id="characterName" name="characterName">
-
-
-    <label for="bio">Bio:</label>
-    <textarea id="bio" name="bio"></textarea>
+    <div class="columns is-full">
+      <div class="column">
+        <div class="box" style="width: 400px;">
+          <h2><label for="characterName">Character Name:</label></h2>
+          <input type="text" id="characterName" name="characterName">
+        </div>
+      </div>
+      <div class="box column">
+        <h2 for="bio">Bio:</h2>
+        <div>
+          <textarea id="bio" name="bio"></textarea>
+        </div>
+      </div>
+    </div>
 
     {{!-- Will fix later --}}
     <div class="right">
-      <div class="stats">
-        Stats:
+      <div class="stats box">
+        <h2>Stats:</h2>
 
         <div class="columns">
           <div class="column">
 
-            <section>
-              <div class="select">
+            <section class="box has-background-primary-light">
+              <div class="select fonty">
                 <select name="stats" id="stat-select-1">
                   <option value="Potions">Potions</option>
                   <option value="Herbology">Herbology</option>
@@ -35,11 +45,11 @@
                   <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level-1" name="level" placeholder="level">
+              <input class="select fonty" type="text" id="level-1" name="level" placeholder="level">
             </section>
 
-            <section>
-              <div class="select">
+            <section class="box has-background-primary-light">
+              <div class="select fonty">
                 <select name="stats" id="stat-select-2">
                   <option value="Potions">Potions</option>
                   <option value="Herbology">Herbology</option>
@@ -53,15 +63,15 @@
                   <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level-2" name="level" placeholder="level">
+              <input class="select fonty" type="text" id="level-2" name="level" placeholder="level">
             </section>
 
           </div>
 
           <div class="column">
 
-            <section>
-              <div class="select">
+            <section class="box has-background-primary-light">
+              <div class="select fonty">
                 <select name="stats" id="stat-select-3">
                   <option value="Potions">Potions</option>
                   <option value="Herbology">Herbology</option>
@@ -75,11 +85,11 @@
                   <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level-3" name="level" placeholder="level">
+              <input class="select fonty" type="text" id="level-3" name="level" placeholder="level">
             </section>
 
-            <section>
-              <div class="select">
+            <section class="box has-background-primary-light">
+              <div class="select fonty">
                 <select name="stats" id="stat-select-4">
                   <option value="Potions">Potions</option>
                   <option value="Herbology">Herbology</option>
@@ -93,15 +103,15 @@
                   <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level-4" name="level" placeholder="level">
+              <input class="select fonty" type="text" id="level-4" name="level" placeholder="level">
             </section>
 
           </div>
 
           <div class="column">
 
-            <section>
-              <div class="select">
+            <section class="box has-background-primary-light">
+              <div class="select fonty">
                 <select name="stats" id="stat-select-5">
                   <option value="Potions">Potions</option>
                   <option value="Herbology">Herbology</option>
@@ -115,11 +125,11 @@
                   <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level-5" name="level" placeholder="level">
+              <input class="select fonty" type="text" id="level-5" name="level" placeholder="level">
             </section>
 
-            <section>
-              <div class="select">
+            <section class="box has-background-primary-light">
+              <div class="select fonty">
                 <select name="stats" id="stat-select-6">
                   <option value="Potions">Potions</option>
                   <option value="Herbology">Herbology</option>
@@ -133,7 +143,7 @@
                   <option value="Astrology">Astrology</option>
                 </select>
               </div>
-              <input type="text" id="level-6" name="level" placeholder="level">
+              <input class="select fonty" type="text" id="level-6" name="level" placeholder="level">
             </section>
 
           </div>
@@ -141,24 +151,24 @@
       </div>
 
 
-      <div class="skills">
+      <div class="skills box">
         <h3>Skills:</h3>
 
         <div class="columns">
 
           <div class="column">
-            <input type="text" id="skill-1" placeholder="skill">
-            <input type="text" id="skill-2" placeholder="skill">
+            <input class="fonty" type="text" id="skill-1" placeholder="skill">
+            <input class="fonty" type="text" id="skill-2" placeholder="skill">
           </div>
 
           <div class="column">
-            <input type="text" id="skill-3" placeholder="skill">
-            <input type="text" id="skill-4" placeholder="skill">
+            <input class="fonty" type="text" id="skill-3" placeholder="skill">
+            <input class="fonty" type="text" id="skill-4" placeholder="skill">
           </div>
 
           <div class="column">
-            <input type="text" id="skill-5" placeholder="skill">
-            <input type="text" id="skill-6" placeholder="skill">
+            <input class="fonty" type="text" id="skill-5" placeholder="skill">
+            <input class="fonty" type="text" id="skill-6" placeholder="skill">
           </div>
 
         </div>
