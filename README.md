@@ -16,9 +16,11 @@ This application allows users to create a personalized account where they can bu
 
 ## USAGE
 
+![HPDex Homepage](<Screenshot 2023-08-15 at 9.14.57 PM.png>)
+
 You must create an account and login to access the rest of the site (except the homepage).
 
-![Login page for HPdex]()
+![Login page for HPdex](<Screenshot 2023-08-15 at 9.15.07 PM.png>)
 
 From there you'll be automatically directed to your personal dashboard which will show existing characters, if you have any, and a button to Create New Character.
 
@@ -26,11 +28,11 @@ You may also delete existing characters from your dashboard.
 
 Edit to existing character profile's is a future development.
 
-![Dashboard page for HPdex]()
+![Dashboard page for HPdex](<Screenshot 2023-08-15 at 9.15.15 PM.png>)
 
 Selecting Create New Character leads you to an input form where you can provide a character name, bio, 6 stats, and 6 skills.
 
-![Create Character page for HPdex]()
+![Create Character page for HPdex](<Screenshot 2023-08-15 at 10.29.20 PM.png>)
 
 The stats are based on Hogwart subjects so think about where your character strength and weaknesses lay in their subjects and provide a number between 1 (weakest) and 15 (strongest) for their level.
 
@@ -40,9 +42,7 @@ From there, submit the form and it will direct you back to your dashboard with t
 
 To see existing character information, just select one of the character names you will see the characters individual profile.
 
-![Alt text](<Screenshot 2023-08-15 at 10.29.20 PM.png>)
-
-![Individual character profile page for HPdex]()
+![Individual character profile page for HPdex](<Screenshot 2023-08-15 at 9.28.54 PM.png>)
 
 ## CREDITS
 
