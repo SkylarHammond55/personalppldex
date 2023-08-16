@@ -4,10 +4,11 @@ const withAuth = require('../../utils/auth');
 // const multer = require('multer');
 // const path = require('path')
 
-// Create character (working in insomnia for profile only)
+// Create character (working)
 router.post('/', withAuth, async (req, res) => {
     try {
         const newProfile = await Profile.create({
+            img: req.file.filename,
             ...req.body,
             user_id: req.session.user_id,
         });

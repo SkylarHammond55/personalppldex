@@ -16,6 +16,8 @@ This application allows users to create a personalized account where they can bu
 
 ## USAGE
 
+Access the deployed website here: [HPDex](https://hpdex-ddd9719a234b.herokuapp.com/)
+
 ![HPDex Homepage](<images/Screenshot 2023-08-15 at 9.14.57 PM.png>)
 
 You must create an account and login to access the rest of the site (except the homepage).
