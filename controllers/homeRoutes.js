@@ -7,9 +7,8 @@ const router = require("express").Router();
 const { User, Profile, Skill, Stats } = require("../models");
 const withAuth = require("../utils/auth");
 
-// GET route for getting all of the dishes that are on the menu
+// GET routes to render each handlebar template
 router.get("/", async (req, res) => {
-  // This method is rendering the 'homepage' handlebars.js template. This is how we connect each route to the correct template.
   res.render("homepage", {
     logged_in: req.session.logged_in,
   });
@@ -69,6 +68,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
 
     // res.status(200).json(userData)
+
     const user = userData.get({ plain: true });
 
     // Renders dashboard.handlebars
@@ -82,7 +82,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  // If the user is already logged in, redirect the request to another route
+  // If the user is already logged in, redirect the request to homepage
   if (req.session.logged_in) {
     res.redirect("/");
     return;
