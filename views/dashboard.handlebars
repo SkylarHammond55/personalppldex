@@ -3,21 +3,27 @@
 {{!-- <link rel="stylesheet" href="/css/login.css"> --}}
 <link rel="stylesheet" href="/css/dashboard.css">
 
-<div class="profiles-list">
-    <h2>Profiles List</h2>
-    {{#if profiles.length}}
-    <ul>
-        {{#each profiles as |profile|}}
-        <h3><a href="/profile/{{profile.id}}">{{profile.name}}</a></h3>
-        <button data-id="{{profile.id}}" id="delete-button">Delete</button>
-        {{/each}}
-    </ul>
-    {{/if}}
+    <h2 class="box" style="font-size: 40px;">LIST OF CHARACTERS</h2>
+<div>
+    <div class="profiles-list">
+        {{#if profiles.length}}
+        <ul>
+            {{#each profiles as |profile|}}
+            <div class="box">
+                <h2 style="font-size: 40px;"><a class="box has-background-primary-light" href="/profile/{{profile.id}}">{{profile.name}}</a></h2>
+                <button data-id="{{profile.id}}" id="edit-button">Edit</button>
+                <button data-id="{{profile.id}}" id="delete-button">Delete</button>
+            </div>
+            {{/each}}
+        </ul>
+        
+        {{/if}}
+    </div>
+    
 </div>
-
-<div class="create-character-button">
-    <a href="/create">Create New Character</a>
-</div>
+    <div class="create-character-button">
+        <a class='box' href="/create">Create New Character</a>
+    </div>
 
 
 </body>
