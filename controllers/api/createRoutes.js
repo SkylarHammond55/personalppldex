@@ -8,7 +8,6 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
     try {
         const newProfile = await Profile.create({
-            img: req.file.filename,
             ...req.body,
             user_id: req.session.user_id,
         });
