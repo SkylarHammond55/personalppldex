@@ -1,57 +1,63 @@
 # HPDex
 
-  ## DESCRIPTION
-  This application allows users to create a personalized account where they can build and save their own custom Harry Potter characters, the characters can either be canon characters or ones of their own creation.  With an intuitive user interface, users can craft characters by selecting a house, assigning unique traits and skills, and giving their characters personalized names and backgrounds, all while ensuring data is securely stored and user passwords are hashed using bcrypt.
+## DESCRIPTION
 
-  ## TABLE OF CONTENTS
-  -- [Usage](#usage)
+This application allows users to create a personalized account where they can build and save their own custom Harry Potter characters, the characters can either be canon characters or ones of their own creation. With an intuitive user interface, users can craft characters by selecting a house, assigning unique traits and skills, and giving their characters personalized names and backgrounds, all while ensuring data is securely stored and user passwords are hashed using bcrypt.
 
-  -- [Credits](#credits)
+## TABLE OF CONTENTS
 
-  -- [License](#license)
+-- [Usage](#usage)
 
-  -- [Contacts](#contacts)
+-- [Credits](#credits)
 
-  ## USAGE
-  You must create an account and login to access the rest of the site (except the homepage).
+-- [License](#license)
 
-  ![Login page for HPdex]()
+-- [Contacts](#contacts)
 
-  From there you'll be automatically directed to your personal dashboard which will show existing characters, if you have any, and a button to Create New Character.
+## USAGE
 
-  You may also delete existing characters from your dashboard.
+You must create an account and login to access the rest of the site (except the homepage).
 
-  Edit to existing character profile's is a future development.
+![Login page for HPdex]()
 
-  ![Dashboard page for HPdex]()
+From there you'll be automatically directed to your personal dashboard which will show existing characters, if you have any, and a button to Create New Character.
 
-  Selecting Create New Character leads you to an input form where you can provide a character name, bio, 6 stats, and 6 skills.
+You may also delete existing characters from your dashboard.
 
-  ![Create Character page for HPdex]()
-  
-  The stats are based on Hogwart subjects so think about where your character strength and weaknesses lay in their subjects and provide a number between 1 (weakest) and 15 (strongest) for their level.
+Edit to existing character profile's is a future development.
 
-  The skills can be anything from known spells, special magical abilities, or even potions they can make flawlessly.
+![Dashboard page for HPdex]()
 
-  From there, submit the form and it will direct you back to your dashboard with the new character showing!
+Selecting Create New Character leads you to an input form where you can provide a character name, bio, 6 stats, and 6 skills.
 
-  To see existing character information, just select one of the character names you will see the characters individual profile.
+![Create Character page for HPdex]()
 
-  ![Individual character profile page for HPdex]()
+The stats are based on Hogwart subjects so think about where your character strength and weaknesses lay in their subjects and provide a number between 1 (weakest) and 15 (strongest) for their level.
 
-  ## CREDITS
-  Login Animation code provided by [Florin Pop](https://codepen.io/FlorinPop17/pen/vPKWjd)
+The skills can be anything from known spells, special magical abilities, or even potions they can make flawlessly.
 
+From there, submit the form and it will direct you back to your dashboard with the new character showing!
 
-  ## LICENSE 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+To see existing character information, just select one of the character names you will see the characters individual profile.
 
-  ## CONTACTS
-  GitHub: [Shawn Davis](https://github.com/DrProfDavis)
+![Alt text](<Screenshot 2023-08-15 at 10.29.20 PM.png>)
 
-  GitHub: [Skylar Hammond](https://github.com/SkylarHammond55)
+![Individual character profile page for HPdex]()
 
-  GitHub: [David McCorkle](https://github.com/DHM0010)
-  
-  GitHub: [Annie McElroy](https://github.com/Annie-McElroy)
+## CREDITS
 
+Login Animation code provided by [Florin Pop](https://codepen.io/FlorinPop17/pen/vPKWjd)
+
+## LICENSE
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## CONTACTS
+
+GitHub: [Shawn Davis](https://github.com/DrProfDavis)
+
+GitHub: [Skylar Hammond](https://github.com/SkylarHammond55)
+
+GitHub: [David McCorkle](https://github.com/DHM0010)
+
+GitHub: [Annie McElroy](https://github.com/Annie-McElroy)
