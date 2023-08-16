@@ -13,7 +13,6 @@ body {
   background-image: url('/images/hogwarts\ pic.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   color: #444;
   font-size: 30px;
 }
@@ -34,10 +33,6 @@ body {
   font-size: 80px;
   color: #8a0908;
 }
-
-/* .header img {
-  width: 100px;
-} */
 
 .navigation {
   display: flex;
