@@ -6,3 +6,6 @@ router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 
 module.exports = router;
+const infoRoutes = require('./infoRoutes');
+
+router.use('/info', infoRoutes);
