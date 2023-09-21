@@ -1,2 +1,28 @@
 <div class="box">{{> navbar}}</div>
-<p>This is the info page</p>
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/info.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<canvas id="myChart"></canvas>
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: {{#each stats}}{{name}}, {{/each}},
+      datasets: [{
+        data: {{#each stats}}{{level}}, {{/each}},
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scale: {
+        ticks: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
